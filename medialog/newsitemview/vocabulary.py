@@ -13,5 +13,5 @@ def ImageSizeVocabulary():
     #sizes = portal_properties.imaging_properties.getProperty('allowed_sizes')  
     #sizes = portal_properties.imaging_properties.getProperty('allowed_sizes')  
     #terms = [title=pair for pair in sizes ]
-    return ['mini', 'preview', 'large']  
+    return ['thumb', 'mini', 'preview', 'large']  
         
