@@ -16,12 +16,12 @@
                       len_text python:len(text.strip())">
 
         <div class="biggernewsImageContainer"
-             tal:condition="context/getImage|nothing" tal:define="newsitemsize python:(context.newsitemsize) or 'preview'">
+             tal:condition="context/getImage|nothing">
             <a href="#"
                tal:define="here_url context/@@plone_context_state/object_url;"
                tal:attributes="href string:$here_url/image/image_view_fullscreen"
                id="parent-fieldname-image">
-               <img  tal:replace="structure python: context.tag(scale=newsitemsize, css_class='newsImage')" src="" alt="" />
+               <img tal:define="newsitemsize python:(context.newsitemsize) or 'preview'" tal:replace="structure python: context.tag(scale=newsitemsize, css_class='newsImage')" src="" alt="" />
             
                 
             </a>

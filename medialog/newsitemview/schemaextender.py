@@ -13,6 +13,11 @@ from archetypes.schemaextender.field import ExtensionField
 
 from medialog.newsitemview.interfaces import INewsitemObject
 
+from zope.schema.vocabulary import SimpleVocabulary, SimpleTerm
+from medialog.newsitemview.vocabulary import ImageSizeVocabulary 
+
+
+
 _ = MessageFactory('medialog.newsitemview')
 
 
@@ -30,7 +35,8 @@ class ContentTypeExtender(object):
     _fields = [
         _StringExtensionField("newsitemsize",
             schemata = "settings",
-            vocabulary = ["mini", "preview", "large"],
+            enforceVocabulary=True,
+            vocabulary = ImageSizeVocabulary(),
             default="preview",
             interfaces = (INewsitemObject,),
             widget = SelectionWidget(
