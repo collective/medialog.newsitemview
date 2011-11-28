@@ -17,6 +17,10 @@
 	factory=".schemaextender.ContentTypeExtender"
         provides="archetypes.schemaextender.interfaces.ISchemaExtender"
     /> 
+    <adapter name="Folder.Extender" 
+	factory=".schemaextender.FolderTypeExtender"
+        provides="archetypes.schemaextender.interfaces.ISchemaExtender"
+    /> 
 
 </configure>
 

@@ -20,6 +20,15 @@ Changelog
 ---------------------
 - Added more sizes and also *none*
 
+0.3
+---------------------
+- Added Summary View for folder.
+
+0.3.1
+---------------------
+- Removed duplicate skin folder
+
+
 **TODO:**
 Need help with the vocabulary, so it takes images sizes from portal properties
 
