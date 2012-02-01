@@ -12,7 +12,7 @@ See http://products.medialog.no/newsitem-view/
 Changelog
 =========
 
-0.3.2
+0.3.3
 ---------------------
 - Added condition to remove whole imagediv if image size was set to none on newsiteview.
 
