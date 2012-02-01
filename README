@@ -11,22 +11,29 @@ See http://products.medialog.no/newsitem-view/
         
 Changelog
 =========
+
+0.3.2
+---------------------
+- Removed <p>hallo</p> (!) and added condition to remove whole imagediv if image size was set to none.
+
+
+
+0.3.1
+---------------------
+- Removed duplicate skin folder
        
-0.1 (11 11 2011)
----------------------      
-- First version
+0.3
+---------------------
+- Added Summary View for folder.
+
 
 0.2
 ---------------------
 - Added more sizes and also *none*
 
-0.3
----------------------
-- Added Summary View for folder.
-
-0.3.1
----------------------
-- Removed duplicate skin folder
+0.1 (11 11 2011)
+---------------------      
+- First version
 
 
 **TODO:**
