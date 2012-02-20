@@ -12,6 +12,12 @@ See http://products.medialog.no/newsitem-view/
 Changelog
 =========
 
+0.3.5
+---------------------
+- added css classes so it is possible to style the different sizes differently. 
+- CSS classes are like this: div.newsImageContainer.previewsize div.newsImageContainer.minisize
+- Removed unicode bug.
+
 0.3.4
 ---------------------
 - Removed the caption while keeping the div (it could be needed for css styling)
