@@ -1,6 +1,6 @@
 Metadata-Version: 1.0
 Name: medialog.newsitemview
-Version: 0.3.6
+Version: 0.4
 Summary: Makes it possible to choose size for newsitem image.
 Home-page: http://products.medialog.no
 Author: Grieg Medialog [Espen Moe-Nilssen]
@@ -9,6 +9,8 @@ License: GPL
 Description: ------------
         Introduction
         ------------
+        
+        Warning: Version 3.8 uses browser views instead of skins, so if you have done any customizations, these will not work.
         
         `medialog.newsitemview` is a simple package that adds an option to choose size of newitem image
         See http://products.medialog.no/newsitem-view/
@@ -19,6 +21,22 @@ Description: ------------
                 
         Changelog
         =========
+        
+        
+        0.4
+        ---------------------
+        - added settings to ATTopic (smart folder / collection).
+        
+        
+        0.3.8
+        ---------------------
+        - Added browser views
+        - Fixed unicode error in caption
+        
+        
+        0.3.7
+        ---------------------
+        - Changed tal expression, there was still unicode errors
         
         0.3.6
         ---------------------

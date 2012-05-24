@@ -59,7 +59,39 @@ class ContentTypeExtender(object):
 
 class FolderTypeExtender(object):
     """Adapter that adds custom data used for image size."""
-    adapts(IATFolder, IATTopic)
+    adapts(IATFolder)
+    implements(ISchemaExtender, IBrowserLayerAwareExtender)
+    layer = IFolderObject
+    _fields = [
+        _StringExtensionField("folderimagesize",
+            schemata = "settings",
+            enforceVocabulary=True,
+            vocabulary = ImageSizeVocabulary(object),
+            default="preview",
+            interfaces = (INewsitemObject,),
+            widget = SelectionWidget(
+                label = _(u"label_folderimagesize",
+                    default=u"Size for image in summary view"),
+                description = _(u"help_folderimagesize",
+                    default=u"Choose Size"),
+                ),
+            ),
+        ]
+
+        
+    def __init__(self, context):
+    	self.context = context
+
+    def getFields(self):
+        return self._fields
+
+#    def __init__(self, contentType):
+#        pass
+
+
+class TopicTypeExtender(object):
+    """Adapter that adds custom data used for image size."""
+    adapts(IATTopic)
     implements(ISchemaExtender, IBrowserLayerAwareExtender)
     layer = IFolderObject
     _fields = [

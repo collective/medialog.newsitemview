@@ -22,6 +22,11 @@
 	factory=".schemaextender.FolderTypeExtender"
         provides="archetypes.schemaextender.interfaces.ISchemaExtender"
     /> 
+    <adapter name="Topic.Extender" 
+	factory=".schemaextender.TopicTypeExtender"
+        provides="archetypes.schemaextender.interfaces.ISchemaExtender"
+    /> 
+
 
 </configure>
 
