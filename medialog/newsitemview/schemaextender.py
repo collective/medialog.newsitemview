@@ -37,7 +37,7 @@ class ContentTypeExtender(object):
         _StringExtensionField("newsitemsize",
             schemata = "settings",
             enforceVocabulary=True,
-            vocabulary = ImageSizeVocabulary(),
+            vocabulary = ImageSizeVocabulary(object),
             default="preview",
             interfaces = (INewsitemObject,),
             widget = SelectionWidget(
@@ -67,7 +67,7 @@ class FolderTypeExtender(object):
         _StringExtensionField("folderimagesize",
             schemata = "settings",
             enforceVocabulary=True,
-            vocabulary = ImageSizeVocabulary(),
+            vocabulary = ImageSizeVocabulary(object),
             default="preview",
             interfaces = (INewsitemObject,),
             widget = SelectionWidget(
