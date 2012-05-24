@@ -8,6 +8,7 @@
     i18n_domain="medialog.newsitemview">
 
    <five:registerPackage package="." initialize=".initialize" />
+   <include package=".browser" />
    <cmf:registerDirectory name="medialog_newsitemview" />
    
    <include package="archetypes.schemaextender" /> 

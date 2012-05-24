@@ -2,6 +2,8 @@
 Introduction
 ------------
 
+Warning: Version 3.8 uses browser views instead of skins, so if you have done any customizations, these will not work.
+
 `medialog.newsitemview` is a simple package that adds an option to choose size of newitem image
 See http://products.medialog.no/newsitem-view/
 
@@ -11,6 +13,21 @@ See http://products.medialog.no/newsitem-view/
         
 Changelog
 =========
+
+0.3.8
+---------------------
+- Added browser views
+- Fixed unicode error in caption
+
+
+0.3.7
+---------------------
+- Changed tal expression, there was still unicode errors
+
+0.3.6
+---------------------
+- Removed a visual clear in the newitem view template
+
 
 0.3.5
 ---------------------

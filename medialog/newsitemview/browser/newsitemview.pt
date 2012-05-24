@@ -1,7 +1,3 @@
-<!-- Page Template Diagnostics
- Compilation failed
- zope.tal.taldefs.TALError: duplicate TAL attribute u'define', at line 18, column 9
--->
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
       xmlns:tal="http://xml.zope.org/namespaces/tal"
       xmlns:metal="http://xml.zope.org/namespaces/metal"
@@ -21,7 +17,7 @@
 
         <div class=""
              tal:condition="context/getImage|nothing" 
-             tal:define="newsitemsize python:(context.newsitemsize) or 'preview';
+             tal:define="newsitemsize view/imagesize;
              containerClass python:'newsImageContainer ' + newsitemsize + 'size'"
              tal:attributes="class containerClass">
             <a href="#"
@@ -29,9 +25,8 @@
                tal:attributes="href string:$here_url/image/image_view_fullscreen"
                tal:condition="python: newsitemsize <> 'none'"
                id="parent-fieldname-image">
-               <img  tal:replace="structure python: context.tag(scale=newsitemsize, css_class='newsImage',  alt='')" src="" />    
-            
-                
+               <img tal:replace="structure python: context.tag(scale=newsitemsize, css_class='newsImage',  alt='', title='', src='')" src=""  />    
+                        
             </a>
             <p class="discreet"  tal:condition="python: newsitemsize <> 'none'">
               <metal:field use-macro="python:context.widget('imageCaption', mode='view')">
@@ -51,9 +46,7 @@
              tal:define="kss_class python:getKssClasses('text', 
                          templateId=templateId, macro='text-field-view');
                          text text|context/getText|nothing"
-             tal:condition="text"
-             tal:attributes="class python:test(context.Format() in ('text/structured',
-                                                   'text/x-rst', ), 'stx' + kss_class, 'plain' + kss_class)">
+             tal:condition="text">
             <div metal:define-slot="inside" tal:replace="structure text">The body</div>
         </div>
     </metal:block>
