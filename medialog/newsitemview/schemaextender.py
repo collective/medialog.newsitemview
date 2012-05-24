@@ -6,7 +6,7 @@ from zope.i18nmessageid import MessageFactory
 from Products.Archetypes.public import StringField
 
 from Products.ATContentTypes.interfaces.news import IATNewsItem
-from Products.ATContentTypes.interface import IATFolder
+from Products.ATContentTypes.interface import IATFolder, IATTopic
 from Products.Archetypes.atapi import SelectionWidget
 
 from archetypes.schemaextender.interfaces import ISchemaExtender, IBrowserLayerAwareExtender 
@@ -59,7 +59,7 @@ class ContentTypeExtender(object):
 
 class FolderTypeExtender(object):
     """Adapter that adds custom data used for image size."""
-    adapts(IATFolder)
+    adapts(IATFolder, IATTopic)
     implements(ISchemaExtender, IBrowserLayerAwareExtender)
     layer = IFolderObject
     _fields = [

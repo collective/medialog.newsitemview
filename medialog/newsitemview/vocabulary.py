@@ -7,6 +7,7 @@ from zope.app.component.hooks import getSite
 
 
 def ImageSizeVocabulary(object):
+    
     #Cant get this to work, so I stick with 3 sizes for now
     #portal_properties = getToolByName(getSite(), 'portal_properties', None)
     #sizes = portal_properties.imaging_properties.getProperty('allowed_sizes')  
