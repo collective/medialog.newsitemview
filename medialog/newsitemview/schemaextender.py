@@ -18,7 +18,6 @@ from zope.schema.vocabulary import SimpleVocabulary, SimpleTerm
 from medialog.newsitemview.vocabulary import ImageSizeVocabulary 
 
 
-
 _ = MessageFactory('medialog.newsitemview')
 
 
