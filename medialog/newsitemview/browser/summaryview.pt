@@ -16,7 +16,7 @@
                     <metal:entry fill-slot="entry">
                 <div class=""
                     tal:define="item_object item/getObject;
-                    folderimagesize python:(context.folderimagesize) or 'preview';
+                    folderimagesize view/imagesize;
                     containerClass python:'tileItem visualIEFloatFix ' + folderimagesize + 'size'"
                     tal:attributes="class containerClass">
                     <div class="imagediv" tal:condition="python: folderimagesize <> 'none'">

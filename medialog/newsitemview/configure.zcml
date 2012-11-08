@@ -27,6 +27,5 @@
         provides="archetypes.schemaextender.interfaces.ISchemaExtender"
     /> 
 
-
 </configure>
 

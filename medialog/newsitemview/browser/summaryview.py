@@ -23,9 +23,9 @@ class SummaryView(BrowserView):
     """
     implements(ISummaryView)
 
-    def imagesize(self):
+    def folderimagesize(self):
         try:
-           return self.context.newsitemsize
+           return self.context.folderimagesize
         except AttributeError:
             return 'mini'           
 
