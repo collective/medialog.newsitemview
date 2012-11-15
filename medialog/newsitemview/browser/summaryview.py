@@ -13,8 +13,8 @@ class ISummaryView(Interface):
     def test():
         """ test method"""
 
-    def imagesize():
-        """ the image size used for news item view"""
+    def folderimagesize():
+        """ the image size used for the view"""
 
 
 class SummaryView(BrowserView):
