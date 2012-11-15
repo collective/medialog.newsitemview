@@ -9,21 +9,8 @@ from zope.app.component.hooks import getSite
 def ImageSizeVocabulary(object):
     return ['thumb', 'mini', 'preview', 'large', 'none']  
        
-#def format_size(size):
-#    return size.split(' ')[0]
-#    
-class ImmageSizeVocabulary(object):
-    site = object.context.getSite()
-    portal_properties = getToolByName(site, 'portal_properties', None)
-    if 'imaging_properties' in portal_properties.objectIds():
-        sizes = portal_properties.imaging_properties.getProperty(
-        'allowed_sizes')
-        terms = [SimpleTerm(value=format_size(pair),
-                    token=format_size(pair),
-                        title=pair) for pair in sizes]
 
-    return SimpleVocabulary(terms)
-    
+        
 
 
 
