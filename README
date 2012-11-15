@@ -14,10 +14,13 @@ See http://products.medialog.no/newsitem-view/
 Changelog
 =========
 
+0.5.1
+---------------------
+- default profile had disappeared. [espenmn]
 
 0.5
 ---------------------
-- fixed folder view settings so. [espenmn]
+- fixed folder view setting. [espenmn]
 
 0.4
 ---------------------
@@ -32,7 +35,7 @@ Changelog
 
 0.3.7
 ---------------------
-- Changed tal expression, there was still unicode errors [espenmn]
+- Changed tal expression, there were still unicode errors [espenmn]
 
 0.3.6
 ---------------------
