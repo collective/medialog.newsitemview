@@ -18,7 +18,7 @@
                     tal:define="item_object item/getObject;
                     folderimagesize python: view.folderimagesize;
                     hide_images python: view.hide_images;
-                    containerClass python:'tileItem visualIEFloatFix ' + folderimagesize + 'size'"
+                    containerClass python:'tileItem visualIEFloatFix ' + str(folderimagesize) + 'size'"
                     tal:attributes="class containerClass">
                     <tal:checkimage tal:condition="not: python: item_type == 'Image' and hide_images">
                     <div class="imagediv" tal:condition="python: folderimagesize <> 'none'">
