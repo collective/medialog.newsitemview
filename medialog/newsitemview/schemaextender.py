@@ -3,11 +3,11 @@ from zope.component import adapts
 from zope.i18nmessageid import MessageFactory
 
 #from archetypes.markerfield.field import InterfaceMarkerField
-from Products.Archetypes.public import StringField
+from Products.Archetypes.public import StringField, BooleanField
 
 from Products.ATContentTypes.interfaces.news import IATNewsItem
 from Products.ATContentTypes.interface import IATFolder, IATTopic
-from Products.Archetypes.atapi import SelectionWidget
+from Products.Archetypes.atapi import SelectionWidget, BooleanWidget
 
 from archetypes.schemaextender.interfaces import ISchemaExtender, IBrowserLayerAwareExtender 
 from archetypes.schemaextender.field import ExtensionField
@@ -23,7 +23,10 @@ _ = MessageFactory('medialog.newsitemview')
 
 class _StringExtensionField (ExtensionField, StringField): 
     pass
-    
+        
+class _BooleanExtensionField(ExtensionField, BooleanField):
+	pass    
+
     
 # need to get vocabulary to work from vocabulary.py    
 
@@ -74,6 +77,17 @@ class FolderTypeExtender(object):
                     default=u"Size for image in summary view"),
                 description = _(u"help_folderimagesize",
                     default=u"Choose Size"),
+                ),
+            ),
+        _BooleanExtensionField("hide_images",
+            schemata = "settings",
+            interfaces = (INewsitemObject,),
+            default = False,
+            widget = BooleanWidget(
+                label = _(u"label_hide_images",
+                    default=u"Hide Images in the summary view"),
+                description = _(u"help_hide_images",
+                    default=u"Hide images from the folder view"),
                 ),
             ),
         ]

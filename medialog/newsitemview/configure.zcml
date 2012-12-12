@@ -14,6 +14,12 @@
    <include package="archetypes.schemaextender" /> 
    <include file="profiles.zcml" />
 
+    <utility
+        provides="zope.schema.interfaces.IVocabularyFactory"
+        component=".vocabulary.ImageSizesVocabulary"
+        name="ImageSizesVocabulary"
+        />
+        
     <adapter name="Newsitem.Extender" 
 	factory=".schemaextender.ContentTypeExtender"
         provides="archetypes.schemaextender.interfaces.ISchemaExtender"
@@ -26,6 +32,8 @@
 	factory=".schemaextender.TopicTypeExtender"
         provides="archetypes.schemaextender.interfaces.ISchemaExtender"
     /> 
+    
+
 
 </configure>
 

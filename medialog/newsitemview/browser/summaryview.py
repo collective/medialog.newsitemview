@@ -27,7 +27,12 @@ class SummaryView(BrowserView):
         try:
            return self.context.folderimagesize
         except AttributeError:
-            return 'mini'           
+            return 'mini'   
+    def hide_images(self):
+        try:
+           return self.context.hide_images
+        except AttributeError:
+            return false           
 
     def __init__(self, context, request):
         self.context = context
