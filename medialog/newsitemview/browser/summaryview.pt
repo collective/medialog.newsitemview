@@ -16,9 +16,10 @@
                     <metal:entry fill-slot="entry">
                 <div class=""
                     tal:define="item_object item/getObject;
-                    folderimagesize python: view.folderimagesize;
+                    folderisize python: view.folderimagesize;
+                    folderimagesize folderisize;
                     hide_images python: view.hide_images;
-                    containerClass python:'tileItem visualIEFloatFix ' + str(folderimagesize) + 'size'"
+                    containerClass python:'tileItem visualIEFloatFix ' + folderimagesize + 'size'"
                     tal:attributes="class containerClass">
                     <tal:checkimage tal:condition="not: python: item_type == 'Image' and hide_images">
                     <div class="imagediv" tal:condition="python: folderimagesize <> 'none'">
