@@ -19,7 +19,7 @@
                     folderimagesize python:(context.folderimagesize) or 'preview';
                     containerClass python:'tileItem visualIEFloatFix ' + folderimagesize + 'size'"
                     tal:attributes="class containerClass">
-                    <div class="imagediv" tal:condition="python: folderimagesize <> 'none'">
+                    <div class="imagediv" tal:condition="python: folderimagesize != 'none'">
                         <a href="#"
                            tal:condition="exists:item_object/image_thumb"
                            tal:attributes="href python:item_url+'/view' ">
