@@ -16,7 +16,7 @@ from medialog.newsitemview.interfaces import INewsitemObject, IFolderObject
 
 from zope.schema.vocabulary import SimpleVocabulary, SimpleTerm
 from medialog.newsitemview.vocabulary import ImageSizeVocabulary 
-from medialog.newsitemview.vocabulary import ImageSizesVocabulary 
+#from medialog.newsitemview.vocabulary import ImageSizesVocabulary 
 
 
 _ = MessageFactory('medialog.newsitemview')
@@ -113,7 +113,7 @@ class TopicTypeExtender(object):
         _StringExtensionField("folderimagesize",
             schemata = "settings",
             enforceVocabulary=True,
-            vocabulary = ImageSizesVocabulary,
+            vocabulary = ImageSizeVocabulary,
             default="preview",
             interfaces = (INewsitemObject,),
             widget = SelectionWidget(

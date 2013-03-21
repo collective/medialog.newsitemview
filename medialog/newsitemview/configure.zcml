@@ -16,8 +16,8 @@
 
     <utility
         provides="zope.schema.interfaces.IVocabularyFactory"
-        component=".vocabulary.ImageSizesVocabulary"
-        name="ImageSizesVocabulary"
+        component=".vocabulary.ImageSizeVocabulary"
+        name="ImageSizeVocabulary"
         />
         
     <adapter name="Newsitem.Extender" 
