@@ -26,7 +26,7 @@ setup(name='medialog.newsitemview',
           'setuptools',
           'archetypes.schemaextender',
           'archetypes.markerfield',
-          'plone.directives',
+          'plone.directives.form',
           # -*- Extra requirements: -*-
       ],
       entry_points="""
