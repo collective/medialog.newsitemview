@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '0.7.2' 
+version = '0.8.1' 
 
 setup(name='medialog.newsitemview',
       version=version,
@@ -26,6 +26,7 @@ setup(name='medialog.newsitemview',
           'setuptools',
           'archetypes.schemaextender',
           'archetypes.markerfield',
+          'plone.directives',
           # -*- Extra requirements: -*-
       ],
       entry_points="""

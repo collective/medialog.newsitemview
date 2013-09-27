@@ -17,6 +17,14 @@
       layer="medialog.newsitemview.interfaces.IFolderObject"
       />
 
+  <browser:page
+      for="*"
+      name="folder_summary_view"
+      class=".summaryview.SummaryView"
+      template="summaryview.pt"
+      allowed_interface="medialog.newsitemview.behavior.ICustomSize"
+      permission="zope.Public"
+      />
 
   <browser:page
       for="*"

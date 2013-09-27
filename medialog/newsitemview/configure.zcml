@@ -12,6 +12,7 @@
    <cmf:registerDirectory name="medialog_newsitemview" />
    
    <include package="archetypes.schemaextender" /> 
+   <include file="behaviors.zcml" />
    <include file="profiles.zcml" />
 
         
@@ -29,6 +30,9 @@
     /> 
     
 
+  <utility
+    component=".vocabulary.ImageSizeVocabulary"
+    name="medialog.newsitemview.ImageSizeVocabulary" />
 
 </configure>
 
