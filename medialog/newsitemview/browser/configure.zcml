@@ -27,7 +27,7 @@
       />
 
   <browser:page
-      for="*"
+      for="medialog.newsitemview.behavior.ICustomSize"
       name="newsitem_view"
       class=".newsitemview.NewsItemView"
       template="newsitemview.pt"

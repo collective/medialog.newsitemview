@@ -11,9 +11,6 @@ class INewsItemView(Interface):
     News Item view interface
     """
 
-    def test():
-        """ test method"""
-        
     def imagesize():
         """ the image size used for news item view"""
 
@@ -42,11 +39,3 @@ class NewsItemView(BrowserView):
     @property
     def portal(self):
         return getToolByName(self.context, 'portal_url').getPortalObject()
-
-    def test(self):
-        """
-        test method
-        """
-        dummy = _(u'a dummy string')
-
-        return {'dummy': dummy}
