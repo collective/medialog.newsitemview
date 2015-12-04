@@ -15,6 +15,11 @@ See http://products.medialog.no/newsitem-view/
 Changelog
 =========
 
+0.9
+---------------------
+- Drop support for Plone 4 [espenmn]
+
+
 0.8.2
 ---------------------
 - fixed getSite so it works with plane 4.3 [espenmn]
